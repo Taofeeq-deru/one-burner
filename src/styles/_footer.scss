@@ -8,7 +8,7 @@ footer {
     padding: 30px 25px 5px 25px;
   }
   @include responsive($mxl) {
-    padding: 30px 15px 5px 60px;
+    padding: 30px 60px 5px 60px;
   }
   .top {
     @include flex(row wrap, space-between, center);
@@ -131,6 +131,13 @@ footer {
           text-decoration: none;
         }
       }
+    }
+  }
+  .copyrights {
+    border-top: 1px solid rgba(69, 69, 69, 0.13);
+    p {
+      color: $dark-footer-sec;
+      font-size: 100%;
     }
   }
 }

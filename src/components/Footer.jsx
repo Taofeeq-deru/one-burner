@@ -210,13 +210,16 @@ class Footer extends Component {
                 <div className="footer-col" key={col.id}>
                   <h1>{col.title}</h1>
                   {col.links.map((link) => (
-                    <Link to={link.url} className="link">
+                    <Link to={link.url} className="link" key={link.id}>
                       {link.text}
                     </Link>
                   ))}
                 </div>
               ))}
             </div>
+          </div>
+          <div className="copyrights">
+            <p>© 2020 Oneburner.com | All Rights Reserved.</p>
           </div>
         </footer>
       </>

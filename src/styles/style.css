@@ -613,7 +613,7 @@ footer {
 
 @media screen and (min-width: 70.5em) {
   footer {
-    padding: 30px 15px 5px 60px;
+    padding: 30px 60px 5px 60px;
   }
 }
 
@@ -862,6 +862,15 @@ footer .footer-flex .footer-col .link {
 footer .footer-flex .footer-col .link:hover {
   color: #462686;
   text-decoration: none;
+}
+
+footer .copyrights {
+  border-top: 1px solid rgba(69, 69, 69, 0.13);
+}
+
+footer .copyrights p {
+  color: rgba(1, 0, 29, 0.6);
+  font-size: 100%;
 }
 
 body {
