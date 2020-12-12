@@ -62,9 +62,6 @@
       .btn-try {
         margin: 5px 0 0 0;
         @include button(80%, 49px, 150px);
-        ion-icon {
-          margin-bottom: -2px;
-        }
       }
     }
   }
@@ -181,9 +178,6 @@
     @include responsive($md) {
       margin: 10px 25px;
     }
-    ion-icon {
-      margin-bottom: -2px;
-    }
   }
   .drop {
     margin: 5px 15px;
@@ -211,11 +205,4 @@
   .show {
     @include flex(column nowrap, flex-start, flex-start);
   }
-}
-
-.landing {
-  height: 100vh;
-}
-.opaque {
-  background-color: $opaque;
 }

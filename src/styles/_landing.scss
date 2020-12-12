@@ -1,0 +1,169 @@
+@import "./variables";
+@import "./mixins";
+
+.landing {
+  .btn-start {
+    @include button(90%, 72px, 270px);
+  }
+  header {
+    @include flex(column nowrap, space-between, center);
+    padding: 0 15px;
+    @include responsive($md) {
+      @include flex(row nowrap, space-between, center);
+      padding: 0 25px;
+    }
+    @include responsive($mxl) {
+      padding: 0 60px;
+      justify-content: space-around;
+    }
+    @include responsive($xl) {
+      padding: 0 100px;
+    }
+    .texts {
+      @include responsive($md) {
+        width: 40%;
+      }
+      @include responsive($lg) {
+        width: 50%;
+      }
+      h1 {
+        font-size: 250%;
+        font-weight: 700;
+        color: $dark-pry;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 100%;
+        color: $dark-sec;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+    }
+    .side-img {
+      width: 350px;
+      height: 400px;
+      @include responsive($smd) {
+        width: 400px;
+        height: 450px;
+      }
+      @include responsive($mxl) {
+        width: 500px;
+        height: 550px;
+      }
+    }
+  }
+  .companies {
+    padding: 30px 0;
+    box-shadow: 0 8px 14px -6px rgb(230, 229, 229);
+    h1 {
+      text-align: center;
+      color: $black;
+      font-weight: 400;
+      font-size: 120%;
+    }
+    .logos {
+      width: 100%;
+      margin: 20px 0;
+      @include flex(row nowrap, flex-start, center);
+      overflow-x: scroll;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+        width: 0 !important;
+      }
+      @include responsive($lg) {
+        @include flex(row wrap, space-around, center);
+      }
+      img {
+        flex-shrink: 0;
+      }
+    }
+  }
+  .support {
+    padding: 0 15px;
+    margin: 40px 0;
+    @include flex(row wrap, flex-start, center);
+    @include responsive($md) {
+      padding: 0 25px;
+      @include flex(row nowrap, space-around, center);
+    }
+    @include responsive($mxl) {
+      padding: 0 60px;
+    }
+    @include responsive($xl) {
+      padding: 0 100px;
+    }
+    .chat-img {
+      @include flex(row nowrap, flex-start, center);
+      .chats-links {
+        .link {
+          margin-bottom: 5px;
+          text-decoration: none;
+          svg path {
+            stroke: $dark-nav;
+          }
+          p {
+            color: $dark-nav;
+            margin: 0 auto;
+            padding: 0;
+            font-size: 80%;
+          }
+          &:hover {
+            text-decoration: none;
+            svg path {
+              stroke: $brand-pry;
+            }
+            p {
+              color: $brand-pry;
+            }
+          }
+        }
+      }
+      img {
+        width: 280px;
+        @include responsive($sm) {
+          width: 340px;
+        }
+        @include responsive($sm) {
+          width: 390px;
+        }
+      }
+    }
+    .texts {
+      @include responsive($lg) {
+        width: 450px;
+      }
+      @include responsive($mxl) {
+        width: 500px;
+      }
+      h1 {
+        font-size: 160%;
+        color: $dark-pry;
+        font-weight: 400;
+      }
+      p {
+        color: $dark-sec;
+      }
+    }
+  }
+  .better-way-to-work {
+    background-color: $brand-sec;
+    color: $white;
+    text-align: center;
+    padding: 90px 0;
+    h1 {
+      font-weight: 700;
+      font-size: 220%;
+    }
+    p {
+      font-weight: 500;
+      font-size: 110%;
+      margin: 30px 0;
+    }
+  }
+}
+
+.opaque {
+  background-color: $opaque;
+}

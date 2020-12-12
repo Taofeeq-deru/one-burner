@@ -68,7 +68,7 @@ class SideNav extends Component {
             Login
           </Link>
           <button className="btn-try" onClick={hideSideNav}>
-            Try For Free <ion-icon name="chevron-forward-outline"></ion-icon>
+            Try For Free {">"}
           </button>
         </div>
       </>

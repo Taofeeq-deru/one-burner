@@ -80,6 +80,7 @@ class Layout extends Component {
       },
     ],
   };
+
   render() {
     const { dditems } = this.state;
     return (
