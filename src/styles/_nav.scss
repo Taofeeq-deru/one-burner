@@ -1,0 +1,221 @@
+@import "./variables";
+@import "./mixins";
+
+.nav-container {
+  position: sticky;
+  top: 0;
+  z-index: 2049;
+  .nav {
+    background-color: $white;
+    padding: 0 15px;
+    font-size: 80%;
+    @include flex(row nowrap, flex-start, center);
+    @include responsive($md) {
+      padding: 0 25px;
+    }
+    @include responsive($mxl) {
+      padding: 0 60px;
+    }
+    .brand {
+      margin-right: auto;
+      @include responsive($lg) {
+        margin-right: 40px;
+      }
+      img {
+        width: 200px;
+      }
+    }
+    .mob {
+      @include responsive($lg) {
+        display: none;
+      }
+      ion-icon {
+        font-size: 40px;
+      }
+    }
+    .link {
+      color: $dark-nav;
+      text-decoration: none;
+      margin: 5px 20px 0 0;
+      display: none;
+      @include responsive($lg) {
+        display: inline;
+      }
+      ion-icon {
+        margin-bottom: -3px;
+      }
+      &:hover {
+        color: $brand-pry;
+        text-decoration: none;
+      }
+    }
+    .active {
+      color: $brand-pry;
+    }
+    .contact-login {
+      margin-left: auto;
+      height: 100%;
+      display: none;
+      @include responsive($lg) {
+        @include flex(row nowrap, flex-start, center);
+      }
+      .btn-try {
+        margin: 5px 0 0 0;
+        @include button(80%, 49px, 150px);
+        ion-icon {
+          margin-bottom: -2px;
+        }
+      }
+    }
+  }
+  .drop {
+    background-color: $white;
+    padding: 20px 0 50px 15px;
+    font-size: 80%;
+    display: none;
+    @include responsive($md) {
+      padding: 20px 0 50px 25px;
+    }
+    @include responsive($mxl) {
+      padding: 20px 0 50px 60px;
+    }
+    .item {
+      margin-right: 10px;
+      @include flex(row nowrap, flex-start, flex-start);
+      svg {
+        margin-right: 10px;
+      }
+      .texts {
+        width: 200px;
+        @include responsive($mxl) {
+          width: 240px;
+        }
+        .link {
+          color: $dark-pry;
+          text-decoration: none;
+          &:hover {
+            color: $brand-pry;
+            text-decoration: none;
+          }
+        }
+        p {
+          color: $dark-footer-sec;
+          margin-top: 7px;
+          line-height: 25px;
+          @include responsive($mxl) {
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+  .show {
+    @include flex(row nowrap, flex-start, flex-start);
+  }
+}
+
+//sidenav styles
+.hideSideNav {
+  width: 0px;
+  //padding-top: 50px;
+}
+
+.showSideNav {
+  width: 100vw;
+  @include responsive($md) {
+    //width: 500px;
+  }
+}
+
+.sideNav {
+  height: 100vh;
+  position: fixed;
+  @include flex(column nowrap, flex-start, flex-start);
+  z-index: 2050;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  background: $white;
+  .top {
+    @include flex(row nowrap, flex-start, center);
+    align-self: stretch;
+    padding: 0 15px;
+    @include responsive($md) {
+      padding: 0 25px;
+    }
+    .brand {
+      margin-right: auto;
+      img {
+        width: 200px;
+      }
+    }
+    ion-icon {
+      font-size: 40px;
+      &:hover {
+        color: $brand-pry;
+      }
+    }
+  }
+  .link {
+    color: $dark-nav;
+    text-decoration: none;
+    margin: 10px 15px;
+    @include responsive($md) {
+      margin: 10px 25px;
+    }
+    ion-icon {
+      margin-bottom: -3px;
+    }
+    &:hover {
+      color: $brand-pry;
+      text-decoration: none;
+    }
+  }
+  .active {
+    color: $brand-pry;
+  }
+  .btn-try {
+    margin: 10px 15px;
+    @include button(80%, 49px, 150px);
+    @include responsive($md) {
+      margin: 10px 25px;
+    }
+    ion-icon {
+      margin-bottom: -2px;
+    }
+  }
+  .drop {
+    margin: 5px 15px;
+    display: none;
+    @include responsive($md) {
+      margin: 5px 25px;
+    }
+    .item {
+      margin: 0 0 3px 0;
+      @include flex(row nowrap, flex-start, center);
+      svg {
+        margin-right: 2px;
+      }
+      .link {
+        color: $dark-pry;
+        text-decoration: none;
+        margin-left: 0;
+        &:hover {
+          color: $brand-pry;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .show {
+    @include flex(column nowrap, flex-start, flex-start);
+  }
+}
+
+.landing {
+  height: 100vh;
+}
+.opaque {
+  background-color: $opaque;
+}
