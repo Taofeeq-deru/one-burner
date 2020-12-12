@@ -19,7 +19,7 @@ class Nav extends Component {
     }
 
     document.querySelector("#dropdown").classList.toggle("show");
-    document.querySelector("#landingPage").classList.toggle("opaque");
+    document.querySelector("#content").classList.toggle("opaque");
   }
 
   render() {
@@ -60,10 +60,7 @@ class Nav extends Component {
               <Link to="" className="link">
                 Login
               </Link>
-              <button className="btn-try">
-                Try For Free{" "}
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-              </button>
+              <button className="btn-try">Try For Free {">"}</button>
             </div>
           </nav>
           <div className="drop" id="dropdown">

@@ -1,6 +1,8 @@
 @import "./variables";
 @import "./mixins";
 @import "./nav";
+@import "./landing";
+@import "./tools";
 @import "./footer";
 
 body {
@@ -9,6 +11,9 @@ body {
   font-family: $font;
   font-size: $fa-sm;
   @include responsive($lg) {
+    font-size: $fa-md;
+  }
+  @include responsive($mxl) {
     font-size: $fa-lg;
   }
 }

@@ -1,0 +1,130 @@
+@import "./variables";
+@import "./mixins";
+
+.tools {
+  .tab {
+    @include flex(row nowrap, flex-start, flex-start);
+    padding: 40px 15px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0 !important;
+    }
+    @include responsive($md) {
+      padding: 40px 25px;
+    }
+    @include responsive($lg) {
+      justify-content: space-between;
+    }
+    @include responsive($mxl) {
+      padding: 40px 60px;
+    }
+    p {
+      font-weight: 700;
+      line-height: 48px;
+      color: $dark-nav;
+      border-bottom: 5px solid rgba(70, 38, 134, 0.4);
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+    p.active {
+      color: $brand-pry;
+      border-bottom: 5px solid $brand-pry;
+    }
+  }
+  .videos-tools {
+    @include flex(row wrap, space-between, center);
+    padding: 0 15px;
+    margin: 50px 0;
+    @include responsive($md) {
+      padding: 0 25px;
+      @include flex(row nowrap, space-between, center);
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+    }
+    @include responsive($mxl) {
+      padding: 0 60px;
+    }
+    @include responsive($xl) {
+      padding: 0 100px;
+    }
+    .texts {
+      @include responsive($md) {
+        width: 40%;
+      }
+      h1 {
+        font-size: 160%;
+        color: $dark-pry;
+        font-weight: 400;
+        text-align: left;
+        width: 80%;
+      }
+      p {
+        color: $dark-sec;
+        text-align: left;
+        width: 80%;
+      }
+    }
+    img {
+      width: 300px;
+      @include responsive($sm) {
+        width: 350px;
+      }
+      @include responsive($smd) {
+        width: 400px;
+      }
+      @include responsive($md) {
+        width: 50%;
+      }
+    }
+  }
+  .integration-tools {
+    padding: 0 15px;
+    margin: 60px 0;
+    text-align: center;
+    @include responsive($md) {
+      padding: 0 25px;
+    }
+    @include responsive($mxl) {
+      padding: 0 60px;
+    }
+    @include responsive($xl) {
+      padding: 0 100px;
+    }
+    h1 {
+      font-size: 160%;
+      color: $dark-pry;
+      font-weight: 400;
+      text-align: center;
+    }
+    .tech-tools {
+      margin: 20px 0;
+      @include flex(row nowrap, flex-start, flex-start);
+      overflow-x: scroll;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+        width: 0 !important;
+      }
+      @include responsive($lg) {
+        @include flex(row wrap, center, center);
+      }
+      svg {
+        margin-right: 15px;
+        flex-shrink: 0;
+      }
+    }
+    .link {
+      font-size: 80%;
+      text-align: center;
+      color: $brand-sec;
+      text-decoration: none;
+      &:hover {
+        color: $brand-pry;
+        text-decoration: none;
+      }
+    }
+  }
+}
