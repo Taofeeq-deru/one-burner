@@ -1,0 +1,34 @@
+@import "./variables";
+
+@mixin responsive($size) {
+  @media screen and (min-width: +$size) {
+    @content;
+  }
+}
+
+@mixin flex($flow, $content, $items) {
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $content;
+  align-items: $items;
+}
+
+@mixin button($fx, $h, $w) {
+  height: $h;
+  width: $w;
+  font-size: $fx;
+  border-radius: 100px;
+  border: none;
+  color: $white;
+  background-color: $brand-pry;
+  cursor: pointer;
+  &:hover {
+    color: $brand-pry;
+    background-color: $white;
+    border: 1px solid $brand-pry;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
